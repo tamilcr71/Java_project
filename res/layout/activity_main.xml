@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HERO BACKGROUND -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hero_bg"
+        android:scaleType="centerCrop"
+        android:alpha="0.55"/>
+
+    <!-- DARK OVERLAY -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC05000A"/>
+
+    <!-- MAIN SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- TOP SPACING -->
+            <View android:layout_width="match_parent" android:layout_height="20dp"/>
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="⚡ SOLO LEVELING"
+                        android:textColor="#FF1744"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/greetText"
+                        android:text="Welcome back, Hunter."
+                        android:textColor="#475569"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- PROFILE BUTTON -->
+                <LinearLayout
+                    android:id="@+id/cardProfile"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/circle_bg"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/avatarText"
+                        android:text="⚔️"
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- HUNTER PROFILE CARD -->
+            <LinearLayout
+                android:id="@+id/hunterCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_red"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/playerName"
+                    android:text="[ HUNTER PROFILE ]"
+                    android:textColor="#55FF1744"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/playerRankText"
+                    android:text="E  —  Weakling"
+                    android:textColor="#FF1744"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/xpText"
+                    android:text="⚡ 0 XP  →  Next: 300 XP"
+                    android:textColor="#FF6D00"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ProgressBar
+                    android:id="@+id/xpBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:progressDrawable="@drawable/xp_bar_progress"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_marginBottom="14dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/streakText"
+                        android:text="🔥 0 day streak"
+                        android:textColor="#FFD700"
+                        android:textSize="12sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/totalDaysText"
+                        android:text="📅 0 days active"
+                        android:textColor="#475569"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- GATES LABEL -->
+            <TextView
+                android:id="@+id/gatesLabel"
+                android:text="▸ AVAILABLE GATES"
+                android:textColor="#55FF1744"
+                android:textSize="11sp"
+                android:letterSpacing="0.15"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- ROW 1: Expense + Sleep -->
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/cardExpense"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="120dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/card_ripple"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+                    <TextView android:text="💸" android:textSize="30sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Expense Gate"
+                        android:textColor="#00FFAA" android:textSize="13sp" android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="+10 XP / day"
+                        android:textColor="#334455" android:textSize="10sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardSleep"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="120dp"
+                    android:background="@drawable/card_ripple"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+                    <TextView android:text="🌙" android:textSize="30sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Sleep Dungeon"
+                        android:textColor="#38BDF8" android:textSize="13sp" android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="+60 XP / night"
+                        android:textColor="#334455" android:textSize="10sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ROW 2: Gym + Checklist -->
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/cardGym"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="120dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/card_ripple"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+                    <TextView android:text="⚔️" android:textSize="30sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Training Ground"
+                        android:textColor="#FF1744" android:textSize="13sp" android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="+20 XP / exercise"
+                        android:textColor="#334455" android:textSize="10sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardChecklist"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="120dp"
+                    android:background="@drawable/card_ripple"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+                    <TextView android:text="📋" android:textSize="30sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Daily Quests"
+                        android:textColor="#A855F7" android:textSize="13sp" android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="+15 XP / quest"
+                        android:textColor="#334455" android:textSize="10sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ROW 3: Boss Battle (FULL WIDTH) -->
+            <LinearLayout
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:id="@+id/cardBoss"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/card_orange"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
+
+                    <TextView android:text="👹" android:textSize="32sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"/>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:text="Monthly Boss Battle"
+                            android:textColor="#FF6D00" android:textSize="15sp" android:textStyle="bold"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="Defeat the boss → +500 XP"
+                            android:textColor="#334455" android:textSize="11sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView android:text="▶"
+                        android:textColor="#FF6D00" android:textSize="18sp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAV -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/nav_bg"
+        android:orientation="horizontal"
+        android:elevation="10dp">
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="🏠 Home"
+            android:textSize="13sp"
+            android:textColor="#FF1744"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/navRank"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="🏆 Rank"
+            android:textSize="13sp"
+            android:textColor="#FFD700"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</FrameLayout>

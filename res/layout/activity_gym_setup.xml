@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="20dp">
+
+    <LinearLayout android:id="@+id/gymSetupContent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View android:layout_width="match_parent" android:layout_height="20dp"/>
+
+        <TextView android:text="⚔️ HUNTER SETUP"
+            android:textColor="#FF1744" android:textSize="26sp" android:textStyle="bold"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="Configure your combat profile."
+            android:textColor="#475569" android:textSize="12sp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- STATS ROW -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <EditText android:id="@+id/heightInput"
+                android:hint="Height (cm)" android:textColor="#F1F5F9"
+                android:textColorHint="#334455" android:backgroundTint="#FF1744"
+                android:inputType="numberDecimal" android:padding="12dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+            <EditText android:id="@+id/weightInput"
+                android:hint="Weight (kg)" android:textColor="#F1F5F9"
+                android:textColorHint="#334455" android:backgroundTint="#FF1744"
+                android:inputType="numberDecimal" android:padding="12dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+            <EditText android:id="@+id/ageInput"
+                android:hint="Age" android:textColor="#F1F5F9"
+                android:textColorHint="#334455" android:backgroundTint="#FF1744"
+                android:inputType="number" android:padding="12dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/bmiText"
+            android:text="" android:textColor="#00FFAA" android:textSize="14sp"
+            android:textStyle="bold" android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- LEVEL SELECT -->
+        <TextView android:text="▸ TRAINING LEVEL"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <RadioGroup android:id="@+id/levelGroup"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <RadioButton android:id="@+id/levelBeginner"
+                android:text="Beginner" android:textColor="#F1F5F9"
+                android:buttonTint="#FF1744" android:checked="true"
+                android:padding="10dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <RadioButton android:id="@+id/levelIntermediate"
+                android:text="Intermediate" android:textColor="#F1F5F9"
+                android:buttonTint="#FF1744" android:padding="10dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <RadioButton android:id="@+id/levelPro"
+                android:text="Pro" android:textColor="#F1F5F9"
+                android:buttonTint="#FF1744" android:padding="10dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <!-- PLAN SELECT -->
+        <TextView android:text="▸ WORKOUT PLAN"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <RadioGroup android:id="@+id/planGroup"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:background="@drawable/card_dark" android:padding="16dp"
+                android:layout_marginEnd="8dp">
+                <RadioButton android:id="@+id/plan3day"
+                    android:text="3-Day Split" android:textColor="#F1F5F9"
+                    android:buttonTint="#FF1744" android:checked="true"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Mon / Wed / Fri\nFull body per session\nIdeal for beginners"
+                    android:textColor="#475569" android:textSize="10sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:background="@drawable/card_dark" android:padding="16dp">
+                <RadioButton android:id="@+id/plan5day"
+                    android:text="5-Day Split" android:textColor="#F1F5F9"
+                    android:buttonTint="#FF1744"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Mon-Fri muscle split\nPush/Pull/Legs\nFor intermediate+"
+                    android:textColor="#475569" android:textSize="10sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RadioGroup>
+
+        <Button android:id="@+id/saveSetupBtn"
+            android:text="⚔️ INITIALIZE HUNTER"
+            android:background="@drawable/btn_primary"
+            android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="15sp"
+            android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="30dp"/>
+
+    </LinearLayout>
+</ScrollView>

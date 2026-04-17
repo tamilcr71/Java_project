@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View android:layout_width="match_parent" android:layout_height="16dp"/>
+
+        <TextView android:text="💸 EXPENSE GATE"
+            android:textColor="#00FFAA" android:textSize="26sp" android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Track your gold, Hunter."
+            android:textColor="#475569" android:textSize="12sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- SUMMARY CARD -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/card_green" android:orientation="vertical"
+            android:padding="16dp" android:layout_marginBottom="12dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/totalText"
+                    android:text="Spent: ₹0" android:textColor="#00FFAA"
+                    android:textSize="15sp" android:textStyle="bold"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/remainText"
+                    android:text="Remaining: ₹0" android:textColor="#00FFAA"
+                    android:textSize="15sp" android:textStyle="bold"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView android:id="@+id/savingsText"
+                android:text="Savings rate: 0%" android:textColor="#00FFAA"
+                android:textSize="12sp" android:layout_marginTop="4dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/dayText"
+                android:text="Day 1 / 30" android:textColor="#475569"
+                android:textSize="12sp" android:layout_marginTop="4dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/lastMonthText"
+            android:text="Last Gate: —" android:textColor="#FFD700"
+            android:textSize="12sp" android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- TARGET INPUT -->
+        <EditText android:id="@+id/targetInput"
+            android:hint="Monthly Target (₹)" android:textColor="#F1F5F9"
+            android:textColorHint="#334455" android:backgroundTint="#00FFAA"
+            android:inputType="number" android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/changeTargetBtn"
+            android:text="✏️ Change Target"
+            android:background="@drawable/btn_green"
+            android:textColor="#00FFAA" android:textSize="12sp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- CATEGORY SPINNER -->
+        <TextView android:text="▸ CATEGORY"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <Spinner android:id="@+id/categorySpinner"
+            android:background="@drawable/card_dark"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent" android:layout_height="50dp"/>
+
+        <!-- DAILY INPUT -->
+        <EditText android:id="@+id/dailyInput"
+            android:hint="Today's Expense (₹)" android:textColor="#F1F5F9"
+            android:textColorHint="#334455" android:backgroundTint="#00FFAA"
+            android:inputType="number" android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/noteInput"
+            android:hint="Note (optional)" android:textColor="#F1F5F9"
+            android:textColorHint="#334455" android:backgroundTint="#475569"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/saveDayBtn"
+            android:text="⚡ SAVE DAY"
+            android:background="@drawable/btn_green"
+            android:textColor="#00FFAA" android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_width="match_parent" android:layout_height="54dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- WEEKLY CHART -->
+        <TextView android:text="▸ WEEKLY SPENDING"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/weeklyChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/card_dark"/>
+
+        <!-- CATEGORY PIE CHART -->
+        <TextView android:text="▸ SPENDING BREAKDOWN"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/categoryChart"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/card_dark"/>
+
+        <!-- CALENDAR -->
+        <TextView android:text="▸ MONTHLY LOG"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <GridLayout android:id="@+id/calendarGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="7"
+            android:layout_marginBottom="30dp"/>
+
+    </LinearLayout>
+</ScrollView>

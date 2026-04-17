@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="20dp">
+
+    <LinearLayout android:id="@+id/sleepContent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View android:layout_width="match_parent" android:layout_height="16dp"/>
+
+        <TextView android:text="🌙 SLEEP DUNGEON"
+            android:textColor="#38BDF8" android:textSize="26sp" android:textStyle="bold"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:text="Rest is power, Hunter."
+            android:textColor="#475569" android:textSize="12sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- STATS ROW -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:background="@drawable/card_blue" android:padding="12dp"
+                android:layout_marginEnd="6dp">
+                <TextView android:id="@+id/sleepStreakText" android:text="🔥 0 day streak"
+                    android:textColor="#FFD700" android:textSize="12sp" android:textStyle="bold"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/avgText" android:text="📊 Avg: 0 hrs"
+                    android:textColor="#38BDF8" android:textSize="11sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:background="@drawable/card_blue" android:padding="12dp"
+                android:layout_marginStart="6dp">
+                <TextView android:id="@+id/debtText" android:text="💤 Sleep debt: 0 hrs"
+                    android:textColor="#FF1744" android:textSize="12sp" android:textStyle="bold"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Target: 7-8 hrs/night"
+                    android:textColor="#475569" android:textSize="11sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FEEDBACK -->
+        <TextView android:id="@+id/feedbackText"
+            android:text="Enter tonight's sleep, Hunter."
+            android:textColor="#A855F7" android:textSize="14sp"
+            android:background="@drawable/card_purple" android:padding="14dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <!-- INPUTS -->
+        <EditText android:id="@+id/sleepInput"
+            android:hint="Sleep hours (e.g. 7.5)" android:textColor="#F1F5F9"
+            android:textColorHint="#334455" android:backgroundTint="#38BDF8"
+            android:inputType="numberDecimal" android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/bedtimeInput"
+                android:hint="Bedtime (e.g. 23:00)" android:textColor="#F1F5F9"
+                android:textColorHint="#334455" android:backgroundTint="#475569"
+                android:inputType="text" android:padding="12dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:layout_marginEnd="8dp"/>
+            <EditText android:id="@+id/waketimeInput"
+                android:hint="Wake time (e.g. 06:30)" android:textColor="#F1F5F9"
+                android:textColorHint="#334455" android:backgroundTint="#475569"
+                android:inputType="text" android:padding="12dp"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- QUALITY RATING -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <TextView android:id="@+id/qualityLabel"
+                android:text="Sleep Quality: "
+                android:textColor="#94A3B8" android:textSize="13sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RatingBar android:id="@+id/qualityBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="5" android:rating="3" android:stepSize="1"
+                android:progressTint="#FFD700"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/saveSleepBtn"
+            android:text="⚡ LOG SLEEP"
+            android:background="@drawable/btn_blue"
+            android:textColor="#38BDF8" android:textStyle="bold" android:textSize="15sp"
+            android:layout_width="match_parent" android:layout_height="54dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- BAR CHART -->
+        <TextView android:text="▸ 14-DAY DUNGEON LOG"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="220dp"
+            android:layout_marginBottom="20dp">
+            <LinearLayout android:id="@+id/chartLayout"
+                android:orientation="horizontal" android:gravity="bottom"
+                android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        </HorizontalScrollView>
+
+        <!-- TREND LINE CHART -->
+        <TextView android:text="▸ SLEEP TREND"
+            android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/trendChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/card_dark"/>
+
+    </LinearLayout>
+</ScrollView>

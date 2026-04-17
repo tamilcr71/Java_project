@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BACKGROUNDS -->
+    <color name="bg_dark">#05000A</color>
+    <color name="bg_card">#0A0012</color>
+    <color name="bg_surface">#0F0018</color>
+    <color name="bg_elevated">#150020</color>
+
+    <!-- PRIMARY ACCENTS -->
+    <color name="accent_red">#FF1744</color>
+    <color name="accent_orange">#FF6D00</color>
+    <color name="accent_gold">#FFD700</color>
+    <color name="accent_purple">#A855F7</color>
+    <color name="accent_blue">#38BDF8</color>
+    <color name="accent_green">#00FFAA</color>
+    <color name="accent_cyan">#00FFFF</color>
+    <color name="accent_pink">#FF0080</color>
+
+    <!-- TEXT -->
+    <color name="text_primary">#F1F5F9</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#475569</color>
+    <color name="text_gold">#FFD700</color>
+
+    <!-- RANK COLORS — each rank has unique color -->
+    <color name="rank_e">#94A3B8</color>
+    <color name="rank_d">#4ADE80</color>
+    <color name="rank_c">#38BDF8</color>
+    <color name="rank_b">#A855F7</color>
+    <color name="rank_a">#FF6D00</color>
+    <color name="rank_s">#FF1744</color>
+    <color name="rank_ss">#FFD700</color>
+    <color name="rank_sss">#00FFFF</color>
+
+    <!-- DOMAIN COLORS -->
+    <color name="expense_color">#00FFAA</color>
+    <color name="sleep_color">#38BDF8</color>
+    <color name="gym_color">#FF1744</color>
+    <color name="quest_color">#A855F7</color>
+    <color name="boss_color">#FF6D00</color>
+
+    <!-- UI ELEMENTS -->
+    <color name="nav_bg">#07000F</color>
+    <color name="divider">#1E1E35</color>
+    <color name="ripple">#33FF1744</color>
+    <color name="overlay">#AA05000A</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- XP BAR -->
+    <color name="xp_bar_start">#A855F7</color>
+    <color name="xp_bar_end">#FF1744</color>
+    <color name="xp_bar_bg">#1A0020</color>
+
+    <!-- CATEGORY COLORS FOR EXPENSE -->
+    <color name="cat_food">#FF6D00</color>
+    <color name="cat_transport">#38BDF8</color>
+    <color name="cat_entertainment">#A855F7</color>
+    <color name="cat_health">#00FFAA</color>
+    <color name="cat_shopping">#FF0080</color>
+    <color name="cat_other">#94A3B8</color>
+</resources>

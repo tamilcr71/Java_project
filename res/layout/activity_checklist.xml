@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <View android:layout_width="match_parent" android:layout_height="16dp"/>
+
+    <TextView android:text="📋 DAILY QUESTS"
+        android:textColor="#A855F7" android:textSize="26sp" android:textStyle="bold"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:text="Conquer your quests, Hunter."
+        android:textColor="#475569" android:textSize="12sp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <!-- STATS -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="8dp">
+        <TextView android:id="@+id/questStreakText"
+            android:text="⚡ Quest Streak: 0 days"
+            android:textColor="#FFD700" android:textSize="12sp" android:textStyle="bold"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/totalXpText"
+            android:text="Session XP: +0"
+            android:textColor="#A855F7" android:textSize="12sp" android:textStyle="bold"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/questXpText"
+        android:text="" android:textSize="14sp" android:textStyle="bold"
+        android:alpha="0" android:gravity="center" android:layout_marginBottom="10dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <!-- INPUT -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+        <EditText android:id="@+id/questInput"
+            android:hint="Add a new quest..."
+            android:textColor="#FFFFFF" android:textColorHint="#334455"
+            android:backgroundTint="#A855F7" android:inputType="text"
+            android:imeOptions="actionDone" android:padding="12dp"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:layout_marginEnd="10dp"/>
+        <Button android:id="@+id/addQuestBtn"
+            android:text="＋ ADD"
+            android:background="@drawable/btn_secondary"
+            android:textColor="#A855F7" android:textStyle="bold" android:textSize="13sp"
+            android:layout_width="wrap_content" android:layout_height="48dp"/>
+    </LinearLayout>
+
+    <TextView android:text="▸ ACTIVE QUESTS"
+        android:textColor="#475569" android:textSize="11sp" android:letterSpacing="0.1"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout android:id="@+id/questList"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"/>
+    </ScrollView>
+
+</LinearLayout>

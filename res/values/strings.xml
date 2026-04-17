@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Solo Leveling</string>
+    <string name="arise">A R I S E</string>
+    <string name="system_awaken">The System has awakened you.</string>
+    <string name="welcome_hunter">Welcome back, Hunter.</string>
+
+    <!-- SPLASH -->
+    <string name="splash_line1">You have been chosen.</string>
+    <string name="splash_line2">The System is initializing…</string>
+
+    <!-- ONBOARDING -->
+    <string name="onboard_title">Create Your Hunter</string>
+    <string name="enter_name">Enter your hunter name</string>
+    <string name="choose_avatar">Choose your avatar</string>
+    <string name="begin_journey">BEGIN JOURNEY</string>
+
+    <!-- HOME -->
+    <string name="hunter_profile">[ HUNTER PROFILE ]</string>
+    <string name="available_gates">▸ AVAILABLE GATES</string>
+    <string name="daily_status">▸ DAILY STATUS</string>
+
+    <!-- DOMAINS -->
+    <string name="expense_gate">Expense Gate</string>
+    <string name="sleep_dungeon">Sleep Dungeon</string>
+    <string name="training_ground">Training Ground</string>
+    <string name="daily_quests">Daily Quests</string>
+    <string name="hunter_rank">Hunter Rank</string>
+    <string name="boss_battle">Boss Battle</string>
+    <string name="my_profile">My Profile</string>
+
+    <!-- XP MESSAGES -->
+    <string name="xp_gained">XP GAINED</string>
+    <string name="rank_up">RANK UP!</string>
+    <string name="quest_complete">QUEST COMPLETE</string>
+    <string name="system_notification">[ SYSTEM NOTIFICATION ]</string>
+
+    <!-- GYM -->
+    <string name="gym_setup_title">Hunter Setup</string>
+    <string name="enter_height">Height (cm)</string>
+    <string name="enter_weight">Weight (kg)</string>
+    <string name="select_level">Select Your Level</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="pro">Pro / Advanced</string>
+    <string name="plan_3day">3-Day Split</string>
+    <string name="plan_5day">5-Day Split</string>
+
+    <!-- BOSS BATTLE -->
+    <string name="boss_title">Monthly Boss</string>
+    <string name="boss_desc">Defeat the boss by completing all monthly goals</string>
+    <string name="boss_hp">Boss HP</string>
+    <string name="your_dmg">Your Damage</string>
+
+    <!-- NOTIFICATIONS -->
+    <string name="notif_title">⚡ System Alert</string>
+    <string name="notif_expense">Don\'t forget to log today\'s expenses, Hunter!</string>
+    <string name="notif_sleep">Time to rest. Log your sleep and recover XP!</string>
+    <string name="notif_gym">Training time! Your body is waiting, Hunter.</string>
+    <string name="notif_quest">Daily quests are waiting. Complete them for XP!</string>
+
+    <!-- ERRORS -->
+    <string name="fill_all_fields">Fill all fields, Hunter.</string>
+    <string name="invalid_input">Invalid input. Try again.</string>
+</resources>

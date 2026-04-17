@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- BACKGROUND GLOW -->
+    <View
+        android:id="@+id/glowCircle"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_bg"
+        android:alpha="0"/>
+
+    <!-- LEFT LINE -->
+    <View
+        android:id="@+id/lineLeft"
+        android:layout_width="120dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="180dp"
+        android:background="#FF1744"
+        android:alpha="0"
+        android:transformPivotX="120dp"/>
+
+    <!-- RIGHT LINE -->
+    <View
+        android:id="@+id/lineRight"
+        android:layout_width="120dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="180dp"
+        android:background="#FF1744"
+        android:alpha="0"
+        android:transformPivotX="0dp"/>
+
+    <!-- ARISE TEXT -->
+    <TextView
+        android:id="@+id/ariseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:text="A R I S E"
+        android:textColor="#FF1744"
+        android:textSize="54sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.3"
+        android:alpha="0"/>
+
+    <!-- SYSTEM TEXT -->
+    <TextView
+        android:id="@+id/systemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="[ SYSTEM INITIALIZED ]"
+        android:textColor="#94A3B8"
+        android:textSize="13sp"
+        android:letterSpacing="0.2"
+        android:alpha="0"/>
+
+    <!-- SUB TEXT -->
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="105dp"
+        android:text="You have been chosen, Hunter."
+        android:textColor="#475569"
+        android:textSize="12sp"
+        android:alpha="0"/>
+
+    <!-- APP NAME BOTTOM -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:text="SOLO LEVELING"
+        android:textColor="#1E1E35"
+        android:textSize="11sp"
+        android:letterSpacing="0.3"/>
+
+</FrameLayout>
